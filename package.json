@@ -1,0 +1,21 @@
+{
+  "name": "dayswithoutprince",
+  "version": "1.0.0",
+  "description": "the Days Without Prince website",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidVujic/dayswithoutprince.git"
+  },
+  "keywords": [
+    "Prince"
+  ],
+  "author": "David Vujic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DavidVujic/dayswithoutprince/issues"
+  },
+  "homepage": "https://github.com/DavidVujic/dayswithoutprince#readme"
+}

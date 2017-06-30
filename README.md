@@ -1,2 +1,3 @@
-# dayswithoutprince
-Days Without Prince - a tribute
+# Days Without Prince
+
+The source code for http://dayswithoutprince.com
