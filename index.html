@@ -2,13 +2,42 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Days without Prince</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Days without Prince</title>
+  <style>
+    body {
+      background-color: purple;
+      color: silver;
+      font-family: serif;
+    }
+
+    #main {
+      text-align: center;
+    }
+
+    #number-of-days {
+      font-size: 20vw;
+    }
+  </style>
 </head>
 
 <body>
-    
+  <section id="main">
+    <div id="number-of-days"></div>
+    <section>
+
+      <script>
+        (function() {
+          var dateWhenPrinceDied = new Date(2016, 3, 21);
+          var now = new Date();
+
+          var difference = Math.abs(now.getTime() - dateWhenPrinceDied.getTime());
+          var numberOfDays = Math.ceil(difference / (1000 * 3600 * 24));
+
+          document.querySelector('#number-of-days').textContent = numberOfDays;
+        }());
+      </script>
 </body>
 
 </html>
