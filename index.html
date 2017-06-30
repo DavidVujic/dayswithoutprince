@@ -12,8 +12,19 @@
       font-family: serif;
     }
 
+    a {
+      color: silver;
+      font-size: 1vw;
+      text-decoration: none;
+    }
+
     #main {
       text-align: center;
+    }
+
+    #footer {
+      text-align: center;
+      padding-top: 20vw;
     }
 
     #number-of-days {
@@ -24,20 +35,22 @@
 
 <body>
   <section id="main">
-    <div id="number-of-days"></div>
-    <section>
+    <article id="number-of-days"></article>
+  </section>
+  <section id="footer">
+    <a href="https://github.com/DavidVujic/dayswithoutprince/">source code</a>
+  </section>
+  <script>
+    (function() {
+      var dateWhenPrinceDied = new Date(2016, 3, 21);
+      var now = new Date();
 
-      <script>
-        (function() {
-          var dateWhenPrinceDied = new Date(2016, 3, 21);
-          var now = new Date();
+      var difference = Math.abs(now.getTime() - dateWhenPrinceDied.getTime());
+      var numberOfDays = Math.ceil(difference / (1000 * 3600 * 24));
 
-          var difference = Math.abs(now.getTime() - dateWhenPrinceDied.getTime());
-          var numberOfDays = Math.ceil(difference / (1000 * 3600 * 24));
-
-          document.querySelector('#number-of-days').textContent = numberOfDays;
-        }());
-      </script>
+      document.querySelector('#number-of-days').textContent = numberOfDays;
+    }());
+  </script>
 </body>
 
 </html>
