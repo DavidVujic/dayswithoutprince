@@ -24,6 +24,8 @@
   <link href="https://fonts.googleapis.com/css?family=Dancing+Script|PT+Sans" rel="stylesheet">
   <title>Days without Prince</title>
   <script src="src/googleanalytics.js"></script>
+  <script src="src/moment.js"></script>
+  <script src="src/moment-timezone-with-data.js"></script>
   <style>
     body {
       background-color: purple;
@@ -71,11 +73,10 @@
   <script>
     (function() {
       function getNumberOfDays(year, month, day) {
-        var start = new Date(year, month, day);
-        var now = new Date();
-
-        var difference = Math.abs(now.getTime() - start.getTime());
-        var numberOfDays = Math.ceil(difference / (1000 * 3600 * 24));
+        var start = new moment.tz([year, month, day], "America/Menominee");
+        var now = new moment.tz(new Date, moment.tz.guess());
+        
+        var numberOfDays = now.diff(start, 'days');
 
         return numberOfDays;
       }
