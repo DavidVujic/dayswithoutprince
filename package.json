@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "the Days Without Prince website",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DavidVujic/dayswithoutprince.git"
@@ -17,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/DavidVujic/dayswithoutprince/issues"
   },
-  "homepage": "https://github.com/DavidVujic/dayswithoutprince#readme"
+  "homepage": "https://github.com/DavidVujic/dayswithoutprince#readme",
+  "dependencies": {
+    "moment": "^2.18.1",
+    "moment-timezone": "^0.5.13"
+  }
 }
